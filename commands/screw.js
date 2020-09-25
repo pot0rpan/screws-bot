@@ -46,6 +46,7 @@ module.exports = {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'x-api-key': process.env.SCREWS_API_KEY,
         },
         body: JSON.stringify({
           longUrl,
