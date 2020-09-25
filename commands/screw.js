@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const { MessageEmbed } = require('discord.js');
 
-const { API_URL, BASE_URL, FOOTER, COLOR } = require('../config');
+const { API_URL, BASE_URL, COLOR_PRIMARY, FOOTER } = require('../config');
 const { addUrlProtocolIfMissing } = require('../utils');
 const {
   validate,
@@ -73,7 +73,7 @@ module.exports = {
     const embed = new MessageEmbed({
       title: 'Your shortened URL is ready',
       description: `For more features visit ${BASE_URL}`,
-      color: COLOR,
+      color: COLOR_PRIMARY,
       fields: [
         { name: 'Shortened URL', value: `${BASE_URL}/${createdUrl.code}` },
         { name: 'Original URL', value: createdUrl.longUrl },

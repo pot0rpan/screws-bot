@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const { MessageEmbed } = require('discord.js');
 
-const { API_URL, COLOR, FOOTER } = require('../config');
+const { API_URL, COLOR_PRIMARY, FOOTER } = require('../config');
 const { addUrlProtocolIfMissing } = require('../utils');
 const { validate, VALIDATOR_URL } = require('../utils/validators');
 
@@ -89,7 +89,7 @@ module.exports = {
 
     const embed = new MessageEmbed({
       title: "Here's what I found",
-      color: COLOR,
+      color: COLOR_PRIMARY,
       fields,
       image,
       footer: FOOTER,

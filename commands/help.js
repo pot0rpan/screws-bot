@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 
-const { COLOR, FOOTER } = require('../config');
+const { COLOR_PRIMARY, FOOTER } = require('../config');
 
 module.exports = {
   name: 'help',
@@ -8,7 +8,7 @@ module.exports = {
   execute(msg, _args) {
     const embed = new MessageEmbed({
       title: 'Available commands:',
-      color: COLOR, // Scre.ws primary green
+      color: COLOR_PRIMARY,
       fields: [
         {
           name: '`screw [url] [code?]`',
@@ -17,6 +17,10 @@ module.exports = {
         {
           name: '`unscrew [url]`',
           value: 'Get a preview of where a URL leads',
+        },
+        {
+          name: '`clean [url]`',
+          value: 'Remove all tracking parameters from a url',
         },
       ],
       footer: FOOTER,

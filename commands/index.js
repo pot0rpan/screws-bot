@@ -3,4 +3,5 @@ module.exports = {
   Ping: require('./ping'),
   Screw: require('./screw'),
   Unscrew: require('./unscrew'),
+  Clean: require('./clean'),
 };
